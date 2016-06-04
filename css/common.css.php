@@ -781,15 +781,24 @@ div#tablestatistics table {
 }
 
 #serverinfo {
-    background: white;
-    font-weight:        bold;
-    padding-bottom: 0.5em;
-    width: 10000px;
+    height: 64px;
+    padding: 20px 15px;
+    background: <?= $GLOBALS['cfg']['PrimaryColor'] ?>;
+
+    font-weight: 500;
+    font-size: 20px;
+
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 #serverinfo .item {
-    white-space:        nowrap;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#serverinfo a.item:last-of-type {
+    color: <?= $GLOBALS['cfg']['PrimaryColorText'] ?>;
 }
 
 #page_nav_icons {

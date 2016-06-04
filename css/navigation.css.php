@@ -27,7 +27,7 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
 }
 
 #pma_navigation #pmalogo {
-    min-height: 64px;
+    height: 64px;
     padding: 20px 15px;
     background: <?= $GLOBALS['cfg']['PrimaryColor'] ?>;
     box-sizing: border-box;
@@ -35,8 +35,8 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
 
 #pma_navigation #pmalogo #imgpmalogo {
     display: block;
+    width: 180px;
     margin: 0 auto;
-    max-width: 100%;
 }
 
 /******************************************************************************/
