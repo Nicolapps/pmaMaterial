@@ -13,30 +13,34 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
 }
 ?>
 
-/* pmaMaterial */
-#pma_navigation #pmalogo {
-    border-bottom: 1px solid #e0e0e0;
-    display: block;
-    height: 64px;
-    background: <?= $GLOBALS['cfg']['PrimaryColor'] ?>;
-    color: <?= $GLOBALS['cfg']['PrimaryColorText'] ?>;
-}
-
-/******************************************************************************/
-/* Navigation */
-
 #pma_navigation {
-    background: <?php echo $GLOBALS['cfg']['NaviBackground']; ?>;
-    color: <?php echo $GLOBALS['cfg']['NaviColor']; ?>;
     width: <?php echo $GLOBALS['cfg']['NaviWidth']; ?>px;
+    background: <?php echo $GLOBALS['cfg']['NaviBackground']; ?>;
     overflow: hidden;
     position: fixed;
     top: 0;
     <?php echo $left; ?>: 0;
     height: 100%;
-    border-<?php echo $right; ?>: 1px solid gray;
     z-index: 800;
+    color: <?php echo $GLOBALS['cfg']['NaviColor']; ?>;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
+
+#pma_navigation #pmalogo {
+    min-height: 64px;
+    padding: 20px 15px;
+    background: <?= $GLOBALS['cfg']['PrimaryColor'] ?>;
+    box-sizing: border-box;
+}
+
+#pma_navigation #pmalogo #imgpmalogo {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/******************************************************************************/
+/* Navigation */
 
 #pma_navigation_content {
     width: 100%;

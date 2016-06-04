@@ -11,8 +11,8 @@
  * General
  */
 
-// Primary color
-$GLOBALS['cfg']['PrimaryColor'] = '#009688';
+// Primary color - find another one at http://www.google.com/design/spec/style/color.html#color-color-palette
+$GLOBALS['cfg']['PrimaryColor'] = '#673AB7';
 
 // Color of text on primary color
 $GLOBALS['cfg']['PrimaryColorText'] = '#ffffff';
