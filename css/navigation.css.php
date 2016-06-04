@@ -77,8 +77,6 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
     border-<?php echo $left; ?>: 1px solid #666;
 }
 
-
-
 #pma_navigation div#recentTableList,
 #pma_navigation div#FavoriteTableList {
     text-align: center;

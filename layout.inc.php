@@ -73,7 +73,7 @@ $GLOBALS['cfg']['FontFamily'] = '"Roboto", sans-serif';
 /**
  * fixed width font family, used in textarea
  */
-$GLOBALS['cfg']['FontFamilyFixed']      = 'monospace';
+$GLOBALS['cfg']['FontFamilyFixed']      = '"Roboto Mono", monospace';
 
 /**
  * tables

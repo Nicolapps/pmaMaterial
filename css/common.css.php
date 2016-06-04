@@ -12,8 +12,6 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
     exit();
 }
 ?>
-/* pmaMaterial */
-
 
 /******************************************************************************/
 
@@ -408,8 +406,6 @@ td .icon {
 .success h1,
 .notice h1,
 div.error h1 {
-    border-bottom:      2px solid;
-    font-weight:        bold;
     text-align:         <?php echo $left; ?>;
     margin:             0 0 0.2em 0;
 }
@@ -417,62 +413,48 @@ div.error h1 {
 div.success,
 div.notice,
 div.error {
+    font-weight:        100;
+    color:              #fff;
     margin:             0.3em 0 0 0;
-    border:             2px solid;
+    padding:            20px;
     background-repeat:  no-repeat;
-    <?php
-    if ($GLOBALS['text_dir'] === 'ltr') { ?>
-        background-position: 10px 50%;
-        padding:            0.1em 0.1em 0.1em 36px;
-    <?php
-    } else { ?>
-        background-position: 99% 50%;
-        padding:            0.1em 46px 0.1em 0.1em;
-        <?php
-    }
-?>
+    box-shadow:         0 1px 4px 0 rgba(0, 0, 0, 0.37);
 }
 
 .success {
-    color:              #000000;
-    background-color:   #f0fff0;
-}
-h1.success,
-div.success {
-    border-color:       #00FF00;
-}
-.success h1 {
-    border-color:       #00FF00;
+    background-color:   #4CAF50;
 }
 
 .notice {
-    color:              #000000;
-    background-color:   #FFFFDD;
-}
-h1.notice,
-div.notice {
-    border-color:       #FFD700;
-}
-.notice h1 {
-    border-color:       #FFD700;
+    background-color:   #2196F3;
 }
 
 .error {
-    background-color:   #FFFFCC;
-    color:              #ff0000;
+    background-color:   #F44336;
 }
 
-h1.error,
-div.error {
-    border-color:       #ff0000;
+.success img,
+.notice img,
+.error img {
+    display: none;
 }
-div.error h1 {
-    border-color:       #ff0000;
+
+.success a,
+.notice a,
+.error a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.success a:hover,
+.notice a:hover,
+.error a:hover {
+    color: #fff;
 }
 
 .confirmation {
     background-color:   #FFFFCC;
 }
+
 fieldset.confirmation {
     border:             0.1em solid #FF0000;
 }
@@ -2792,7 +2774,7 @@ table.show_create td {
 #pma_console .message,
 #pma_console .query_input {
     position: relative;
-    font-family: Monaco, Consolas, monospace;
+    font-family: "Roboto Mono", Monaco, Consolas, monospace;
     cursor: text;
     margin: 0 10px .2em 1.4em;
 }
@@ -3022,7 +3004,7 @@ html.ie7 #pma_console .query_input {
 
 .cm-s-pma .CodeMirror-code pre,
 .cm-s-pma .CodeMirror-code {
-    font-family: Monaco, Consolas, monospace;
+    font-family: "Roboto Mono", Monaco, Consolas, monospace;
 }
 .cm-s-pma .CodeMirror-measure>pre,
 .cm-s-pma .CodeMirror-code>pre,
