@@ -4,7 +4,7 @@
  * Common styles for the original theme
  *
  * @package    PhpMyAdmin-theme
- * @subpackage Material
+ * @subpackage pmaMaterial
  */
 
 // unplanned execution path
@@ -12,7 +12,7 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
     exit();
 }
 ?>
-/* Material */
+/* pmaMaterial */
 
 
 /******************************************************************************/

@@ -4,7 +4,7 @@
  * For detailed layout configuration, please refer to the css files.
  *
  * @package    PhpMyAdmin-theme
- * @subpackage Material
+ * @subpackage pmaMaterial
  */
 
 /**

@@ -3,11 +3,11 @@
  * Theme information
  *
  * @package    PhpMyAdmin-theme
- * @subpackage Material
+ * @subpackage pmaMaterial
  */
 
 /**
  *
  */
-$theme_name = 'Material';
+$theme_name = 'pmaMaterial';
 $theme_full_version = '0.1';

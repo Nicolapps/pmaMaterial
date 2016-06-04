@@ -4,7 +4,7 @@
  * Navigation styles for the original theme
  *
  * @package    PhpMyAdmin-theme
- * @subpackage Original
+ * @subpackage pmaMaterial
  */
 
 // unplanned execution path
@@ -13,7 +13,7 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
 }
 ?>
 
-/* Material */
+/* pmaMaterial */
 #pma_navigation #pmalogo {
     border-bottom: 1px solid #e0e0e0;
     display: block;
