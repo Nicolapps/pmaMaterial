@@ -12,6 +12,18 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
 }
 ?>
 
+/* Fonts */
+@font-face {
+    font-family: 'pmaIcons';
+    src:    url('./themes/pmaMaterial/fonts/pmaIcons.eot?n5sqd7');
+    src:    url('./themes/pmaMaterial/fonts/pmaIcons.eot?n5sqd7#iefix') format('embedded-opentype'),
+        url('./themes/pmaMaterial/fonts/pmaIcons.ttf?n5sqd7') format('truetype'),
+        url('./themes/pmaMaterial/fonts/pmaIcons.woff?n5sqd7') format('woff'),
+        url('./themes/pmaMaterial/fonts/pmaIcons.svg?n5sqd7#pmaIcons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /******************************************************************************/
 
 /* general tags */
