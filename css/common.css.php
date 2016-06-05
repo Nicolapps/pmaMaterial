@@ -1,7 +1,6 @@
 <?php
-/* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * Common styles for the original theme
+ * Common styles
  *
  * @package    PhpMyAdmin-theme
  * @subpackage pmaMaterial
@@ -559,7 +558,11 @@ div#querychart {
 /**
  * login form
  */
-body#loginform h1,
+
+body#loginform h1 {
+    display: none;
+}
+
 body#loginform a.logo {
     display: block;
     text-align: center;
@@ -576,10 +579,27 @@ body#loginform div.container {
     margin: 0 auto;
 }
 
-form.login label {
-    float: <?php echo $left; ?>;
-    width: 10em;
-    font-weight: bolder;
+body#loginform form {
+    display: block;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+body#loginform fieldset {
+    background: #fff;
+    border: none;
+}
+
+body#loginform fieldset legend {
+    width: 100%;
+    padding: 10px;
+    margin: 0 0 0 -10px;
+
+    background: <?php echo $GLOBALS['cfg']['PrimaryColor']; ?>;
+    color: <?php echo $GLOBALS['cfg']['PrimaryColorText']; ?>;
+
+    font-size: 20px;
+    font-weight: 100;
 }
 
 .commented_column {
