@@ -829,6 +829,11 @@ div#tablestatistics table {
     color: rgba(255, 255, 255, 0.7);
 }
 
+#serverinfo .separator {
+    font-family: 'pmaIcons';
+    margin-left: -3px;
+}
+
 #serverinfo a.item:last-of-type {
     color: <?= $GLOBALS['cfg']['PrimaryColorText'] ?>;
 }
