@@ -663,50 +663,56 @@ ul#topmenu, ul#topmenu2, ul.tabs {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-ul#topmenu2 {
-    margin: 0.25em 0.5em 0;
-    height: 2em;
-    clear: both;
-}
-
 ul#topmenu li, ul#topmenu2 li {
-    float:              <?php echo $left; ?>;
-    margin:             0;
-    padding:            0;
-    vertical-align:     middle;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
 }
 
 #topmenu li.active {
     box-shadow: inset 0 -2px 0 0 white;
 }
 
-#topmenu img, #topmenu2 img {
+#topmenu2 li.active {
+    box-shadow: inset 0 -2px 0 0 <?php echo $GLOBALS['cfg']['PrimaryColor']; ?>;
+}
+
+#topmenu2 li.active a {
+    color: <?php echo $GLOBALS['cfg']['PrimaryColor']; ?>;
+}
+
+#floating_menubar img, #topmenu2 img {
     display: none;
 }
 
-#topmenu a {
-    color: <?php echo $GLOBALS['cfg']['PrimaryColorText']; ?>;
+#topmenu a, #topmenu2 a {
     text-transform: uppercase;
     line-height: 48px;
     padding: 0 10px;
     transition: opacity .28s ease;
 }
 
+#topmenu a {
+    color: <?php echo $GLOBALS['cfg']['PrimaryColorText']; ?>;
+}
+
 #topmenu a:hover {
     opacity: 0.7;
+}
+
+#topmenu a:hover, #topmenu2 a:hover{
+    text-decoration: none;
 }
 
 ul#topmenu li:hover {
     background: none;
 }
 
-ul#topmenu a:hover {
-    text-decoration: none;
-}
-
 fieldset.caution a {
     color:              #FF0000;
 }
+
 fieldset.caution a:hover {
     color:              #ffffff;
     background-color:   #FF0000;
@@ -716,6 +722,14 @@ ul#topmenu ul {
     -moz-box-shadow:    2px 2px 3px #666;
     -webkit-box-shadow: 2px 2px 3px #666;
     box-shadow:         2px 2px 3px #666;
+}
+
+#topmenu2 {
+    border-bottom: 1px solid #dbdbdb;
+}
+
+#topmenu2 a {
+    color: #6A6A6A;
 }
 
 /* end topmenu */
@@ -811,7 +825,7 @@ div#tablestatistics table {
 
 #serverinfo .separator {
     font-family: 'pmaIcons';
-    margin-left: -3px;
+    margin-left: -8px;
 }
 
 #serverinfo a.item:last-of-type {
@@ -852,11 +866,6 @@ div#tablestatistics table {
     color: #D6D6D6;
     text-shadow: none;
 }
-
-#serverinfo img {
-    margin:             0 0.1em 0 0.2em;
-}
-
 
 #textSQLDUMP {
     width:              95%;
