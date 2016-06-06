@@ -79,6 +79,33 @@ h3 {
     font-weight:        bold;
 }
 
+input[type="submit"] {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background: #673AB7;
+    color: #fff;
+    border: 0;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+select {
+    background-color: transparent;
+    padding: 4px 0;
+    font-size: 16px;
+    color: rgba(0,0,0, 0.26);
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0, 0.12);
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    /* TODO: Select icon */
+}
+
+select:focus {
+    outline: none;
+}
+
 a, a:link,
 a:visited,
 a:active,
@@ -627,10 +654,13 @@ body#loginform fieldset legend {
 
 /* topmenu */
 ul#topmenu, ul#topmenu2, ul.tabs {
-    font-weight:        bold;
     list-style-type:    none;
     margin:             0;
     padding:            0;
+}
+
+#floating_menubar {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 ul#topmenu2 {
@@ -646,24 +676,32 @@ ul#topmenu li, ul#topmenu2 li {
     vertical-align:     middle;
 }
 
+#topmenu li.active {
+    box-shadow: inset 0 -2px 0 0 white;
+}
+
 #topmenu img, #topmenu2 img {
-    vertical-align:     middle;
-    margin-<?php echo $right; ?>:       0.1em;
+    display: none;
 }
 
-/* default tab styles */
-ul#topmenu a, ul#topmenu span {
-    display:            block;
-    margin:             2px 2px 0;
-    padding:            2px 2px 0;
-    white-space:        nowrap;
+#topmenu a {
+    color: <?php echo $GLOBALS['cfg']['PrimaryColorText']; ?>;
+    text-transform: uppercase;
+    line-height: 48px;
+    padding: 0 10px;
+    transition: opacity .28s ease;
 }
 
-ul#topmenu2 a {
-    display:            block;
-    margin:             0.1em;
-    padding:            0.2em;
-    white-space:        nowrap;
+#topmenu a:hover {
+    opacity: 0.7;
+}
+
+ul#topmenu li:hover {
+    background: none;
+}
+
+ul#topmenu a:hover {
+    text-decoration: none;
 }
 
 fieldset.caution a {
@@ -674,70 +712,12 @@ fieldset.caution a:hover {
     background-color:   #FF0000;
 }
 
-#topmenu {
-    margin-top:         0.5em;
-    padding:            0.1em 0.3em 0.1em 0.3em;
-}
-
 ul#topmenu ul {
     -moz-box-shadow:    2px 2px 3px #666;
     -webkit-box-shadow: 2px 2px 3px #666;
     box-shadow:         2px 2px 3px #666;
 }
 
-ul#topmenu > li {
-    border-bottom:      1pt solid black;
-}
-
-/* default tab styles */
-ul#topmenu a, ul#topmenu span {
-    background-color:   <?php echo $GLOBALS['cfg']['BgOne']; ?>;
-    border:             0 solid <?php echo $GLOBALS['cfg']['BgTwo']; ?>;
-    border-width:       1pt 1pt 0 1pt;
-    -moz-border-radius: 0.4em 0.4em 0 0;
-    border-radius:      0.4em 0.4em 0 0;
-}
-
-ul#topmenu ul a {
-    border-width:       1pt 0 0 0;
-    -moz-border-radius: 0;
-    border-radius:      0;
-}
-
-ul#topmenu ul li:first-child a {
-    border-width:       0;
-}
-
-/* enabled hover/active tabs */
-ul#topmenu > li > a:hover,
-ul#topmenu > li > .tabactive {
-    margin:             0;
-    padding:            2px 4px;
-    text-decoration:    none;
-}
-
-ul#topmenu ul a:hover,
-ul#topmenu ul .tabactive {
-    text-decoration:    none;
-}
-
-ul#topmenu a.tab:hover,
-ul#topmenu .tabactive {
-    background-color:   <?php echo $GLOBALS['cfg']['MainBackground']; ?>;
-}
-
-ul#topmenu2 a.tab:hover,
-ul#topmenu2 a.tabactive {
-    background-color:   <?php echo $GLOBALS['cfg']['BgOne']; ?>;
-    -moz-border-radius: 0.3em;
-    border-radius:      0.3em;
-    text-decoration:    none;
-}
-
-/* to be able to cancel the bottom border, use <li class="active"> */
-ul#topmenu > li.active {
-     border-bottom:      1pt solid <?php echo $GLOBALS['cfg']['MainBackground']; ?>;
-}
 /* end topmenu */
 
 /* zoom search */
@@ -807,9 +787,9 @@ div#tablestatistics table {
 
 /* Heading */
 #topmenucontainer {
-    background: white;
-    padding-<?php echo $right; ?>: 1em;
+    background: <?php echo $GLOBALS['cfg']['PrimaryColor']; ?>;
     width: 100%;
+    height: 48px;
 }
 
 #serverinfo {
