@@ -674,11 +674,7 @@ ul#topmenu li, ul#topmenu2 li {
     box-shadow: inset 0 -2px 0 0 white;
 }
 
-#topmenu2 li.active {
-    box-shadow: inset 0 -2px 0 0 <?php echo $GLOBALS['cfg']['PrimaryColor']; ?>;
-}
-
-#topmenu2 li.active a {
+#topmenu2 li a.tabactive{
     color: <?php echo $GLOBALS['cfg']['PrimaryColor']; ?>;
 }
 
@@ -686,18 +682,18 @@ ul#topmenu li, ul#topmenu2 li {
     display: none;
 }
 
-#topmenu a, #topmenu2 a {
+#topmenu > li > a, #topmenu2 a {
     text-transform: uppercase;
     line-height: 48px;
     padding: 0 10px;
     transition: opacity .28s ease;
 }
 
-#topmenu a {
+#topmenu > li > a {
     color: <?php echo $GLOBALS['cfg']['PrimaryColorText']; ?>;
 }
 
-#topmenu a:hover {
+#topmenu > li > a:hover {
     opacity: 0.7;
 }
 
@@ -719,13 +715,23 @@ fieldset.caution a:hover {
 }
 
 ul#topmenu ul {
-    -moz-box-shadow:    2px 2px 3px #666;
-    -webkit-box-shadow: 2px 2px 3px #666;
-    box-shadow:         2px 2px 3px #666;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+}
+
+ul#topmenu ul a {
+    font-size: 16px;
+    color: <?php echo $GLOBALS['cfg']['PrimaryColor']; ?>;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+
+ul#topmenu ul a:hover {
+    background-color: #eee;
 }
 
 #topmenu2 {
     border-bottom: 1px solid #dbdbdb;
+    text-align: center;
 }
 
 #topmenu2 a {
