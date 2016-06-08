@@ -81,8 +81,8 @@ h3 {
 
 input[type="submit"] {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    background: #673AB7;
-    color: #fff;
+    background: <?= $GLOBALS['cfg']['PrimaryColor'] ?>;
+    color: <?= $GLOBALS['cfg']['PrimaryColorText'] ?>;
     border: 0;
     padding: 12px 30px;
     text-transform: uppercase;
@@ -826,7 +826,8 @@ div#tablestatistics table {
 
 #serverinfo .item {
     white-space: nowrap;
-    color: rgba(255, 255, 255, 0.7);
+    color: <?= $GLOBALS['cfg']['PrimaryColorText'] ?>;
+    opacity: 0.7;
 }
 
 #serverinfo .separator {
@@ -835,7 +836,7 @@ div#tablestatistics table {
 }
 
 #serverinfo a.item:last-of-type {
-    color: <?= $GLOBALS['cfg']['PrimaryColorText'] ?>;
+    opacity: 1;
 }
 
 #page_nav_icons {
@@ -909,7 +910,7 @@ div#tablestatistics table {
     font-style: italic;
     white-space: nowrap;
     margin-left: 10px;
-    color: #fff;
+    color: <?= $GLOBALS['cfg']['PrimaryColorText'] ?>;
     opacity: 0.7;
 }
 
