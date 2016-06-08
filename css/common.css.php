@@ -840,20 +840,61 @@ div#tablestatistics table {
 
 #page_nav_icons {
     position: fixed;
-    top: 0;
-    <?php echo $right; ?>: 0;
+    bottom: 16px;
+    <?php echo $right; ?>: 16px;
     z-index: 99;
     padding: .1em 0;
 }
 
 #goto_pagetop, #lock_page_icon, #page_settings_icon {
-    padding: .3em;
-    background: white;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    display: block;
+    margin-top: 10px;
+    background: #fff;
+    color: #7a7a7a;
+    text-align: center;
+    line-height: 56px;
+    font-family: 'pmaIcons';
+    font-size: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+}
+
+#goto_pagetop img,
+#lock_page_icon img,
+#page_settings_icon img {
+    display: none;
+}
+
+#lock_page_icon:empty {
+    display: none;
+}
+
+#page_settings_icon:after {
+    content: 'S';
+}
+
+#goto_pagetop:after {
+    content: 'A';
 }
 
 #page_settings_icon {
     cursor: pointer;
     display: none;
+}
+
+#page_settings_icon[style="display: inline;"] {
+    display: block!important;
+}
+
+#goto_pagetop {
+    background: <?= $GLOBALS['cfg']['PrimaryColor'] ?>;
+    color: <?= $GLOBALS['cfg']['PrimaryColorText'] ?>;
+}
+
+#goto_pagetop:hover {
+    text-decoration: none;
 }
 
 #page_settings_modal {
@@ -865,12 +906,11 @@ div#tablestatistics table {
 }
 
 #span_table_comment {
-    font-weight: bold;
     font-style: italic;
     white-space: nowrap;
     margin-left: 10px;
-    color: #D6D6D6;
-    text-shadow: none;
+    color: #fff;
+    opacity: 0.7;
 }
 
 #textSQLDUMP {
