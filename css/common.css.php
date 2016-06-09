@@ -38,11 +38,7 @@ textarea {
 }
 
 body {
-<?php if (! empty($GLOBALS['cfg']['FontFamily'])) { ?>
     font-family:        <?php echo $GLOBALS['cfg']['FontFamily']; ?>;
-    <?php
-}
-?>
     padding:            0;
     margin: 0;
     margin-<?php echo $left; ?>: 240px;
@@ -1277,12 +1273,6 @@ div#queryboxcontainer div#bookmarkoptions {
 /* end querybox */
 
 /* main page */
-#maincontainer {
-    background-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath('logo_right.png');?>);
-    background-position: <?php echo $right; ?> bottom;
-    background-repeat: no-repeat;
-}
-
 #mysqlmaininformation,
 #pmamaininformation {
     float: <?php echo $left; ?>;
@@ -1438,29 +1428,36 @@ div.sqlvalidate  {
     background:         <?php echo $GLOBALS['cfg']['BgOne']; ?>;
 }
 
+#main_pane_left, #main_pane_right {
+    padding: 15px 10px;
+    box-sizing: border-box;
+    min-width: 300px;
+}
+
 #main_pane_left {
-    width:              60%;
-    min-width:          260px;
+    width:              50%;
     float:              <?php echo $left; ?>;
-    padding-top:        1em;
 }
 
 #main_pane_right {
-    overflow:           hidden;
-    min-width:          160px;
-    padding-top: 1em;
-    padding-<?php echo $left; ?>: 1em;
+    width: 50%;
+    float:              <?php echo $right; ?>;
 }
 
 .group {
-    border-<?php echo $left; ?>: 0.3em solid <?php echo $GLOBALS['cfg']['ThBackground']; ?>;
-    margin-bottom:      1em;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+    border-radius: 2px;
+    margin-bottom: 1em;
+    padding: 10px;
+    background: #fff;
+    color: #333;
+    line-height: 1.5em;
 }
 
 .group h2 {
-    background:         <?php echo $GLOBALS['cfg']['ThBackground']; ?>;
-    padding:            0.1em 0.3em;
-    margin-top:         0;
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: 100;
 }
 
 .group-cnt {
