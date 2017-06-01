@@ -10,4 +10,4 @@
  *
  */
 $theme_name = 'pmaMaterial';
-$theme_full_version = '0.1';
+$theme_full_version = '0.2';
